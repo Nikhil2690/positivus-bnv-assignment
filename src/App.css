@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+#root {
+  margin: 0;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 20s linear infinite;
+}
+
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-right {
+  animation: slide-right 20s linear infinite;
+}
+
+.custom-neon {
+  background-color: #B9FF66;
+}
+
+.custom-grey {
+  background-color: #F3F3F3;
+}
+
+.custom-button-bg {
+  background-color: #191A23;
+}
