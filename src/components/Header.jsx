@@ -18,7 +18,7 @@ const Header = () => {
           <li><a href="#" className='hover:text-gray-600'>Use Cases</a></li>
           <li><a href="#" className='hover:text-gray-600'>Pricing</a></li>
           <li><a href="#" className='hover:text-gray-600'>Blog</a></li>
-          <button className='border border-black px-6 py-2 rounded-lg hover:bg-black hover:text-white transition'>
+          <button className='border border-black px-6 py-2 rounded-lg transition'>
             Request a quote
           </button>
         </ul>
