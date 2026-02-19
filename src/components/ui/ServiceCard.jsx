@@ -15,7 +15,6 @@ const ServiceCard = ({heading, headingBg, rightImage, cardBg}) => {
       ${cardBg}
     `}>
       
-      {/* 1. Heading: Top Left on mobile */}
       <div className='col-start-1 row-start-1 self-start md:h-full md:flex md:flex-col md:justify-between'>
         <div className='w-full md:w-60'>
           <span className={`
@@ -28,8 +27,6 @@ const ServiceCard = ({heading, headingBg, rightImage, cardBg}) => {
           </span>
         </div>
 
-        {/* 2. Button: Bottom Left on mobile */}
-        {/* Added hidden md:flex to the desktop version and a mobile-only version below */}
         <div className='hidden md:flex items-center gap-3'>
           <button className='flex gap-2 items-center font-medium'>
             <img src={learn} alt='goToLogo' className='h-6 w-6' />
@@ -38,7 +35,6 @@ const ServiceCard = ({heading, headingBg, rightImage, cardBg}) => {
         </div>
       </div>
 
-      {/* 3. Illustration: Top Right on mobile */}
       <div className='col-start-2 row-start-1 flex justify-end items-start md:items-center'>
         <img 
           src={rightImage} 
@@ -47,7 +43,6 @@ const ServiceCard = ({heading, headingBg, rightImage, cardBg}) => {
         />
       </div>
 
-      {/* 4. Mobile Button: Specific styling for small screens only */}
       <div className='col-span-2 md:hidden mt-2'>
         <button className='bg-transparent flex gap-2 items-center font-medium p-0'>
           <img src={learn} alt='goToLogo' className='h-8 w-8' />

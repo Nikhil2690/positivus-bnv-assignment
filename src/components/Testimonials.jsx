@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import rightArrow from '../../public/right-arrow.png'
-import leftArrow from '../../public/arrow.png'
+import leftArrow from '../../public/leftArr.png'
 import star from '../../public/fourStar.svg'
+import { FiArrowRight } from "react-icons/fi";
+
 
 const Testimonials = () => {
   const [index, setIndex] = useState(1);
@@ -15,7 +16,6 @@ const Testimonials = () => {
   return (
     <div className="p-6 sm:p-10 mt-8">
 
-      {/* Heading */}
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 w-full sm:w-1/2 mb-10 sm:mb-16 text-center sm:text-left sm:mx-0 mx-auto">
         <h2 className="font-bold text-3xl sm:text-3xl text-black px-3 py-2 rounded-xl custom-neon">
           Testimonials
@@ -42,7 +42,6 @@ const Testimonials = () => {
                   {item.text}
                 </p>
 
-                {/* Tail */}
                 <div className="absolute -bottom-3 left-12 w-6 h-6 bg-[#111827] border-l border-b border-[#b9ff66] rotate-315"></div>
               </div>
 
@@ -69,7 +68,7 @@ const Testimonials = () => {
                 prev === 0 ? testimonials.length - 1 : prev - 1
               )
             }
-            className="h-6 w-6 text-white cursor-pointer opacity-70 hover:opacity-100"
+            className="h-6 w-6 text-white cursor-pointer opacity-70 hover:opacity-100 transition-opacity"
           />
 
           <div className="flex gap-2 sm:gap-3">
@@ -79,25 +78,22 @@ const Testimonials = () => {
                 alt="star icon"
                 key={i}
                 onClick={() => setIndex(i)}
-                className={`h-5 w-5 sm:h-6 sm:w-6 cursor-pointer transition-all duration-300 
-                            rotate-45 ${i === index ? 'filter brightness-150' : 'opacity-70'}`}
-                style={{
-                  filter: i === index ? 'bg-[#b9ff66]' : 'none',
-                }}
+                className={`h-5 w-5 sm:h-6 sm:w-6 cursor-pointer transition-all duration-300 text-white 
+                            rotate-45 ${i === index ? 'brightness-150' : 'opacity-70'}`}
               />
             ))}
           </div>
 
-          <img
-            src={rightArrow}
-            alt="right arrow"
+          <div
             onClick={() =>
               setIndex((prev) =>
                 prev === testimonials.length - 1 ? 0 : prev + 1
               )
             }
-            className="h-6 w-6 cursor-pointer opacity-70 hover:opacity-100"
-          />
+            className="h-6 w-6 flex items-center justify-center cursor-pointer opacity-70 hover:opacity-100 text-white transition-opacity"
+          >
+            <FiArrowRight size={24} /> 
+          </div>
 
         </div>
 

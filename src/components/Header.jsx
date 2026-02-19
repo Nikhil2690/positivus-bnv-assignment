@@ -6,13 +6,11 @@ const Header = () => {
 
   return (
     <nav className='sticky w-full h-20 top-0 bg-white z-50 flex items-center justify-around md:justify-around px-6'>
-      {/* Logo Section */}
       <div className='flex gap-3 items-center'>
         <img src={HeaderLogo} alt='logo' className='h-8 w-8' />
         <h1 className='text-black font-bold text-xl'>Positivus</h1>  
       </div>
 
-      {/* Desktop Navigation - Hidden on small screens */}
       <div className='hidden md:block text-black'>
         <ul className='flex items-center gap-10'>
           <li><a href="#" className='hover:text-gray-600'>About us</a></li>
@@ -26,13 +24,11 @@ const Header = () => {
         </ul>
       </div>
 
-      {/* Hamburger Icon - Only visible on small screens */}
       <div className='md:hidden flex items-center'>
         <button 
           onClick={() => setIsOpen(!isOpen)} 
           className='text-black focus:outline-none'
         >
-          {/* Simple SVG for Hamburger */}
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {isOpen ? (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -43,7 +39,6 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className='absolute top-20 left-0 w-full bg-white border-b border-gray-200 md:hidden flex flex-col items-center py-6 gap-6 shadow-lg z-40'>
           <ul className='flex flex-col items-center gap-6 text-black text-lg'>

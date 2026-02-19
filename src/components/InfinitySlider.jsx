@@ -12,17 +12,14 @@ const InfinitySlider = () => {
   return (
     <div className="overflow-hidden w-full bg-gray-100 h-25 py-10 flex items-center">
 
-      {/* DESKTOP (single row) */}
       <div className="hidden sm:flex animate-slide-left gap-28 w-max">
         {[...logos, ...logos].map((logo, index) => (
           <img key={index} src={logo} className="h-12" />
         ))}
       </div>
 
-      {/* MOBILE (two rows) */}
       <div className="flex flex-col gap-8 sm:hidden">
 
-        {/* Top row - slide left */}
         <div className="overflow-hidden">
           <div className="flex animate-slide-left gap-16 w-max">
             {[...logos, ...logos].map((logo, index) => (
@@ -31,7 +28,6 @@ const InfinitySlider = () => {
           </div>
         </div>
 
-        {/* Bottom row - slide right */}
         <div className="overflow-hidden">
           <div className="flex animate-slide-right gap-16 w-max">
             {[...logos, ...logos].map((logo, index) => (
